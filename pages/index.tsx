@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Surroundio | Home</title>
+        <title>G-Clef</title>
       </Head>
       <div
         className="pt-44 pb-44 lg:px-24 px-16 bg-no-repeat bg-cover bg-fixed"
