@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const navVarient = {
   top: {
-    backgroundColor: "rgba(0,0,0,0)",
+    backgroundColor: "rgba(0,0,0,0.8)",
   },
   scroll: {
     backgroundColor: "rgba(46, 71, 107, 0.9)",
@@ -70,7 +70,7 @@ export default function NavigationBar() {
                 className="lg:w-40 w-28"
               />
             </Link>
-            <div className="lg:flex hidden justify-between text-lg items-center text-white space-x-10 ">
+            <div className="lg:flex hidden justify-between text-sm items-center text-white space-x-10 ">
               <Link
                 href="/regulation"
                 className={cls(
@@ -181,7 +181,85 @@ export default function NavigationBar() {
               )}
             </button>
           </div>
-          <motion.div className="text-white">Hello</motion.div>
+          {toggleMenu ? (
+            <motion.div className={`text-white lg:hidden flex flex-col`}>
+              <Link
+                href="/regulation"
+                className={cls(
+                  "text-right px-5 py-8",
+                  router.pathname === "/regulation"
+                    ? "text-[#4f78b2]"
+                    : "hover:text-[#4f78b2] transition-colors"
+                )}
+              >
+                <span>REGULATION</span>
+              </Link>
+              <Link
+                href="/jury"
+                className={cls(
+                  "text-right px-5 py-8",
+                  router.pathname === "/regulation"
+                    ? "text-[#4f78b2]"
+                    : "hover:text-[#4f78b2] transition-colors"
+                )}
+              >
+                <span>JURY</span>
+              </Link>
+              <Link
+                href="/contact"
+                className={cls(
+                  "text-right px-5 py-8",
+                  router.pathname === "/regulation"
+                    ? "text-[#4f78b2]"
+                    : "hover:text-[#4f78b2] transition-colors"
+                )}
+              >
+                <span>CONTACT</span>
+              </Link>
+              <Link
+                href="/notice"
+                className={cls(
+                  "text-right px-5 py-8",
+                  router.pathname === "/regulation"
+                    ? "text-[#4f78b2]"
+                    : "hover:text-[#4f78b2] transition-colors"
+                )}
+              >
+                <span>NOTICE</span>
+              </Link>
+              <Link
+                href="/past"
+                className={cls(
+                  "text-right px-5 py-8",
+                  router.pathname === "/regulation"
+                    ? "text-[#4f78b2]"
+                    : "hover:text-[#4f78b2] transition-colors"
+                )}
+              >
+                <span>PAST WINNERS</span>
+              </Link>
+              <div className="flex justify-end items-center text-white text-sm py-3">
+              <button
+                onClick={() => set_lanToggle("KR")}
+                className={cls(
+                  "border-r border-white px-4 transition",
+                  lanToggle === "KR" ? "text-[#4f78b2]" : "hover:text-[#4f78b2]"
+                )}
+              >
+                한국어
+              </button>
+              <button
+                onClick={() => set_lanToggle("EN")}
+                className={cls(
+                  "border-l border-white px-4 transition",
+                  lanToggle === "EN" ? "text-[#4f78b2]" : "hover:text-[#4f78b2]"
+                )}
+              >
+                ENGLISH
+              </button>
+            </div>
+            </motion.div>
+          ) : null}
         </motion.nav>
       </div>
       <motion.button
@@ -190,8 +268,23 @@ export default function NavigationBar() {
         initial={{ opacity: 0 }}
         animate={buttonAnimation}
         transition={{ duration: 0.1 }}
-        className="fixed bottom-4 right-4 bg-white p-5 rounded-full hover:bg-gray-300 transition"
-      ></motion.button>
+        className="fixed bottom-4 right-4 bg-white lg:p-5 p-3 rounded-full hover:bg-gray-300 transition"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 15.75l7.5-7.5 7.5 7.5"
+          />
+        </svg>
+      </motion.button>
     </>
   );
 }
