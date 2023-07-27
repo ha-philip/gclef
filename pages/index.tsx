@@ -12,27 +12,16 @@ export default function Home() {
       <Head>
         <title>G-Clef</title>
       </Head>
-      <div className="pt-32 pb-32 lg:px-24 px-8 bg-[whitesmoke] flex lg:justify-between lg:items-center lg:flex-row flex-col justify-center">
-        <div>
-          <div className="absolute lg:top-80 lg:left-56 top-60 lg:space-y-10 space-y-5">
-            <h1 className="text-white lg:text-5xl text-3xl">
-              The 3rd online
-              <br />
-              <span className="text-blue-400 font-bold lg:text-7xl text-5xl">
-                G-clef
-              </span>
-            </h1>
-            <p className="text-white lg:text-3xl text-sm">
-              International Music Competition
-            </p>
+      <div className="pt-32 pb-32 bg-cover bg-no-repeat flex flex-col justify-end items-center"
+        style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('/bgindex.jpg')"}}>
+          <div className="lg:mt-24 flex justify-center items-center gap-5">
+            <span className="lg:w-16 w-8 h-[0.2rem] bg-[#fea116]"></span>
+            <h1 className="text-white lg:text-2xl text-base tracking-widest font-thin">The 3rd Online</h1>
+            <h1 className="text-white lg:text-5xl text-2xl tracking-widest font-thin">&quot;G-Clef&quot;</h1>
+            <span className="lg:w-16 w-8 h-[0.2rem] bg-[#fea116]"></span>
           </div>
-          <motion.div
-            className="lg:w-[34rem] lg:h-[34rem] bg-cover w-[20rem] h-[20rem]"
-            style={{
-              backgroundImage: `url(${banner})`,
-            }}
-          ></motion.div>
-        </div>
+          <h1 className="text-white font-bold lg:text-6xl text-3xl mt-10 text-center tracking-wide">International Music Competition</h1>
+          <button className="bg-[#fea116] px-12 py-4 text-white tracking-tight lg:text-xl text-lg mt-10 hover:bg-[#fdad35] transition">APPLY</button>
       </div>
     </>
   );
