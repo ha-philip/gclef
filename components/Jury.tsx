@@ -204,6 +204,28 @@ export default function Jury() {
                   </div>
                 </>
               )}
+               {juryCard === jury[7].id && (
+                <>
+                  <div className="flex">
+                    <motion.div
+                      layoutId={juryCard}
+                      style={{ backgroundImage: `url(${jury[7].photo})` }}
+                      className="lg:w-80 lg:h-80 w-44 h-44 bg-cover bg-no-repeat"
+                    />
+                    <div className="p-7 font-thin tracking-tight lg:w-[40rem] w-52 lg:h-80 h-44 flex flex-col lg:gap-10 gap-3 justify-center items-start">
+                      <p className="mb-2 lg:text-2xl text-sm tracking-wider">
+                        {jury[7].name} <br />( {jury[7].country} )
+                      </p>
+                      <p className="lg:text-lg text-xs">
+                        {jury[7].genre}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
+                    {jury[7].description}
+                  </div>
+                </>
+              )}
             </div>
           </motion.div>
         </>

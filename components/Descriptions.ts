@@ -64,4 +64,12 @@ export const jury: IJury[] = [
     photo: "/ham.png",
     description: "Graduated from Sunhwa Arts School. Successfully completed the Gifted Artist Program affiliated with the St. Petersburg National Conservatory of Music, Russia Graduated summa cum laude from Bachelor of Arts, Master of Arts and Artist Diploma Program at Mozarteum University Salzburg, Austria Performed with Central Symphony Orchestra for ‘Young Artist Concert’ and Seoul Philharmonic Orchestra for ‘Youth Concert’ Performed solo at Seoul Arts Center Recital Hall in 2011 and 2013 Invited to many musical performances, including Ensemble Tonkün at Sejong Art Center and Kumho Art Hall Invited to perform for Saturday Concert at Baum Art Center, Performed at various concerts at home and abroad, including Korea International Wind Band Festival, Peace Concert at Seoul Arts Center Concert Hall, Charity Concert for East Japan Great Earthquake in Tokyo, and the Invitation Concert at Seocho Cultural Center Current) serving as an Associate Professor of the Department of Music and Arts at Seoul Arts College and lecturer at Seoul National University of Education and Seonhwa Arts Middle/High School, and a director of the Korean Society for Early Childhood and Elementary Music Education Clarinettiste for Ensemble Luminasia and Ensemble MOZ",
   },
+  {
+    id: "kim",
+    name: "Kim Jae Han",
+    country: "South Korea",
+    genre: "Jury ( Piano )",
+    photo: "/jaehan.jpeg",
+    description: "YONSEI Univercity Music Collage.",
+  },
 ];

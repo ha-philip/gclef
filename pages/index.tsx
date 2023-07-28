@@ -1,5 +1,6 @@
 import Introduce from "@/components/Introduce";
 import Jury from "@/components/Jury";
+import Regulation from "@/components/Regulation";
 import { motion } from "framer-motion";
 import Head from "next/head";
 
@@ -27,6 +28,7 @@ export default function Home() {
       </div>
       <Introduce/>
       <Jury/>
+      <Regulation/>
     </>
   );
 }
