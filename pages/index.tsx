@@ -1,5 +1,7 @@
+import Contact from "@/components/Contact";
 import Introduce from "@/components/Introduce";
 import Jury from "@/components/Jury";
+import Notice from "@/components/Notice";
 import Regulation from "@/components/Regulation";
 import { motion } from "framer-motion";
 import Head from "next/head";
@@ -15,7 +17,7 @@ export default function Home() {
       <Head>
         <title>G-Clef</title>
       </Head>
-      <div className="lg:pt-64 lg:pb-[30rem] py-60 bg-cover bg-no-repeat flex flex-col justify-end items-center"
+      <div className="lg:pt-64 lg:pb-[30rem] py-60 bg-cover bg-no-repeat flex flex-col justify-end items-center bg-fixed"
         style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('/bgindex.jpg')"}}>
           <div className="flex justify-center items-center gap-5">
             <span className="lg:w-16 w-8 h-[0.2rem] bg-[#fea116]"></span>
@@ -29,6 +31,8 @@ export default function Home() {
       <Introduce/>
       <Jury/>
       <Regulation/>
+      <Notice/>
+      <Contact/>
     </>
   );
 }

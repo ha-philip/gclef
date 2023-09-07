@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { jury } from "./Descriptions";
+import Link from "next/link";
 
 export default function Jury() {
   const [juryCard, set_juryCard] = useState<string | null>(null);
@@ -19,6 +20,13 @@ export default function Jury() {
         <h2 className="lg:text-2xl text-lg font-bold lg:text-left text-center">
           2022 Jury members
         </h2>
+        <div className="flex lg:justify-start justify-center items-center gap-2">
+          <Link className="font-thin lg:text-base text-sm hover:text-[#fea116]" href="">
+            Past Jury Members
+            
+          </Link>
+        </div>
+
         <div className="flex flex-col justify-center items-center space-y-10 mt-10">
           <div className="grid lg:grid-cols-4 grid-cols-2 gap-6">
             {jury.map((data, number) => (
@@ -62,9 +70,7 @@ export default function Jury() {
                       <p className="mb-2 lg:text-2xl text-sm tracking-wider">
                         {jury[0].name} <br />( {jury[0].country} )
                       </p>
-                      <p className="lg:text-lg text-xs">
-                        {jury[0].genre}
-                      </p>
+                      <p className="lg:text-lg text-xs">{jury[0].genre}</p>
                     </div>
                   </div>
                   <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
@@ -72,7 +78,7 @@ export default function Jury() {
                   </div>
                 </>
               )}
-               {juryCard === jury[1].id && (
+              {juryCard === jury[1].id && (
                 <>
                   <div className="flex">
                     <motion.div
@@ -84,9 +90,7 @@ export default function Jury() {
                       <p className="mb-2 lg:text-2xl text-sm tracking-wider">
                         {jury[1].name} <br />( {jury[1].country} )
                       </p>
-                      <p className="lg:text-lg text-xs">
-                        {jury[1].genre}
-                      </p>
+                      <p className="lg:text-lg text-xs">{jury[1].genre}</p>
                     </div>
                   </div>
                   <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
@@ -94,7 +98,7 @@ export default function Jury() {
                   </div>
                 </>
               )}
-               {juryCard === jury[2].id && (
+              {juryCard === jury[2].id && (
                 <>
                   <div className="flex">
                     <motion.div
@@ -106,9 +110,7 @@ export default function Jury() {
                       <p className="mb-2 lg:text-2xl text-sm tracking-wider">
                         {jury[2].name} <br />( {jury[2].country} )
                       </p>
-                      <p className="lg:text-lg text-xs">
-                        {jury[2].genre}
-                      </p>
+                      <p className="lg:text-lg text-xs">{jury[2].genre}</p>
                     </div>
                   </div>
                   <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
@@ -116,7 +118,7 @@ export default function Jury() {
                   </div>
                 </>
               )}
-               {juryCard === jury[3].id && (
+              {juryCard === jury[3].id && (
                 <>
                   <div className="flex">
                     <motion.div
@@ -128,9 +130,7 @@ export default function Jury() {
                       <p className="mb-2 lg:text-2xl text-sm tracking-wider">
                         {jury[3].name} <br />( {jury[3].country} )
                       </p>
-                      <p className="lg:text-lg text-xs">
-                        {jury[3].genre}
-                      </p>
+                      <p className="lg:text-lg text-xs">{jury[3].genre}</p>
                     </div>
                   </div>
                   <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
@@ -138,7 +138,7 @@ export default function Jury() {
                   </div>
                 </>
               )}
-               {juryCard === jury[4].id && (
+              {juryCard === jury[4].id && (
                 <>
                   <div className="flex">
                     <motion.div
@@ -150,9 +150,7 @@ export default function Jury() {
                       <p className="mb-2 lg:text-2xl text-sm tracking-wider">
                         {jury[4].name} <br />( {jury[4].country} )
                       </p>
-                      <p className="lg:text-lg text-xs">
-                        {jury[4].genre}
-                      </p>
+                      <p className="lg:text-lg text-xs">{jury[4].genre}</p>
                     </div>
                   </div>
                   <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
@@ -160,7 +158,7 @@ export default function Jury() {
                   </div>
                 </>
               )}
-               {juryCard === jury[5].id && (
+              {juryCard === jury[5].id && (
                 <>
                   <div className="flex">
                     <motion.div
@@ -172,9 +170,7 @@ export default function Jury() {
                       <p className="mb-2 lg:text-2xl text-sm tracking-wider">
                         {jury[5].name} <br />( {jury[5].country} )
                       </p>
-                      <p className="lg:text-lg text-xs">
-                        {jury[5].genre}
-                      </p>
+                      <p className="lg:text-lg text-xs">{jury[5].genre}</p>
                     </div>
                   </div>
                   <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
@@ -182,7 +178,7 @@ export default function Jury() {
                   </div>
                 </>
               )}
-               {juryCard === jury[6].id && (
+              {juryCard === jury[6].id && (
                 <>
                   <div className="flex">
                     <motion.div
@@ -194,9 +190,7 @@ export default function Jury() {
                       <p className="mb-2 lg:text-2xl text-sm tracking-wider">
                         {jury[6].name} <br />( {jury[6].country} )
                       </p>
-                      <p className="lg:text-lg text-xs">
-                        {jury[6].genre}
-                      </p>
+                      <p className="lg:text-lg text-xs">{jury[6].genre}</p>
                     </div>
                   </div>
                   <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
@@ -204,7 +198,7 @@ export default function Jury() {
                   </div>
                 </>
               )}
-               {juryCard === jury[7].id && (
+              {juryCard === jury[7].id && (
                 <>
                   <div className="flex">
                     <motion.div
@@ -216,9 +210,7 @@ export default function Jury() {
                       <p className="mb-2 lg:text-2xl text-sm tracking-wider">
                         {jury[7].name} <br />( {jury[7].country} )
                       </p>
-                      <p className="lg:text-lg text-xs">
-                        {jury[7].genre}
-                      </p>
+                      <p className="lg:text-lg text-xs">{jury[7].genre}</p>
                     </div>
                   </div>
                   <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">

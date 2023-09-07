@@ -36,7 +36,7 @@ export default function Footer() {
           src="/mainlogo.png"
           className="lg:w-52 w-32"
         />
-        <span className="lg:text-sm text-xs text-gray-400">Richter-Award copyright © 2022 Nationalux Canada, All rights reserved.</span>
+        <span className="lg:text-sm text-xs text-gray-400">G-Clef copyright © 2022 Nationalux Canada, All rights reserved.</span>
     </div>
   );
 }

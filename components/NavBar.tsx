@@ -4,15 +4,6 @@ import { motion, useAnimation, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const navVarient = {
-  top: {
-    backgroundColor: "rgba(15, 23, 43, 0.9)",
-  },
-  scroll: {
-    backgroundColor: "rgba(15, 23, 43, 0.9)",
-  },
-};
-
 const ScrollUp = {
   top: {
     opacity: "0",
@@ -58,11 +49,10 @@ export default function NavigationBar() {
     <>
       <div>
         <motion.nav
-          variants={navVarient}
           animate={navAnimation}
           transition={{ duration: 0.1 }}
           initial={"top"}
-          className="fixed top-0 w-full z-20 flex flex-col"
+          className="fixed top-0 w-full z-20 flex flex-col bg-[#0f172be6]"
         >
           <div className="flex justify-between items-center lg:px-0 px-5">
             <Link href="/">
@@ -74,56 +64,31 @@ export default function NavigationBar() {
             <div className="lg:flex hidden justify-between text-sm items-center text-white space-x-10">
               <Link
                 href="#jury"
-                className={cls(
-                  "flex flex-col items-center space-y-2 ",
-                  router.pathname === "/#jury"
-                    ? "text-[#fea116]"
-                    : "hover:text-[#fea116] transition-colors"
-                )}
+                className="flex flex-col items-center space-y-2 hover:text-[#fea116] transition"
               >
                 <span>JURY</span>
               </Link>
               <Link
                 href="#past"
-                className={cls(
-                  "flex flex-col items-center space-y-2 ",
-                  router.pathname === "/#past"
-                    ? "text-[#fea116]"
-                    : "hover:text-[#fea116] transition-colors"
-                )}
+                className="flex flex-col items-center space-y-2 hover:text-[#fea116] transition"
               >
                 <span>PAST WINNERS</span>
               </Link>
               <Link
                 href="#regulation"
-                className={cls(
-                  "flex flex-col items-center space-y-2 ",
-                  router.pathname === "/#regulation"
-                    ? "text-[#fea116]"
-                    : "hover:text-[#fea116] transition-colors"
-                )}
+                className="flex flex-col items-center space-y-2 hover:text-[#fea116] transition"
               >
                 <span>REGULATION</span>
               </Link>
               <Link
                 href="#notice"
-                className={cls(
-                  "flex flex-col items-center space-y-2 ",
-                  router.pathname === "/#notice"
-                    ? "text-[#fea116]"
-                    : "hover:text-[#fea116] transition-colors"
-                )}
+                className="flex flex-col items-center space-y-2 hover:text-[#fea116] transition"
               >
                 <span>NOTICE</span>
               </Link>
               <Link
                 href="#contact"
-                className={cls(
-                  "flex flex-col items-center space-y-2 ",
-                  router.pathname === "/#contact"
-                    ? "text-[#fea116]"
-                    : "hover:text-[#fea116] transition-colors"
-                )}
+                className="flex flex-col items-center space-y-2 hover:text-[#fea116] transition"
               >
                 <span>CONTACT</span>
               </Link>
@@ -173,79 +138,44 @@ export default function NavigationBar() {
           {toggleMenu ? (
             <motion.div className={`text-white lg:hidden flex flex-col text-xs`}>
               <Link
-                href="/regulation"
-                className={cls(
-                  "text-right px-5 py-5",
-                  router.pathname === "/regulation"
-                    ? "text-[#fea116]"
-                    : "hover:text-[#fea116] transition-colors"
-                )}
+                href="#regulation"
+                className="text-right px-5 py-5 hover:text-[#fea116]"
               >
                 <span>MAIN</span>
               </Link>
               <Link
                 href="/jury"
-                className={cls(
-                  "text-right px-5 py-5",
-                  router.pathname === "/regulation"
-                    ? "text-[#fea116]"
-                    : "hover:text-[#fea116] transition-colors"
-                )}
+                className="text-right px-5 py-5 hover:text-[#fea116]"
               >
                 <span>WELCOME</span>
               </Link>
               <Link
                 href="/contact"
-                className={cls(
-                  "text-right px-5 py-5",
-                  router.pathname === "/regulation"
-                    ? "text-[#fea116]"
-                    : "hover:text-[#fea116] transition-colors"
-                )}
+                className="text-right px-5 py-5 hover:text-[#fea116]"
               >
                 <span>INFORMATION</span>
               </Link>
               <Link
                 href="/notice"
-                className={cls(
-                  "text-right px-5 py-5",
-                  router.pathname === "/regulation"
-                    ? "text-[#fea116]"
-                    : "hover:text-[#fea116] transition-colors"
-                )}
+                className="text-right px-5 py-5 hover:text-[#fea116]"
               >
                 <span>JURY</span>
               </Link>
               <Link
                 href="/past"
-                className={cls(
-                  "text-right px-5 py-5",
-                  router.pathname === "/regulation"
-                    ? "text-[#fea116]"
-                    : "hover:text-[#fea116] transition-colors"
-                )}
+                className="text-right px-5 py-5 hover:text-[#fea116]"
               >
                 <span>CONTACT</span>
               </Link>
               <Link
                 href="/past"
-                className={cls(
-                  "text-right px-5 py-5",
-                  router.pathname === "/regulation"
-                    ? "text-[#fea116]"
-                    : "hover:text-[#fea116] transition-colors"
-                )}
+                className="text-right px-5 py-5 hover:text-[#fea116]"
               >
                 <span>NOTICE</span>
               </Link>
               <Link
                 href="/past"
-                className={cls(
-                  "text-right px-5 py-5",
-                  router.pathname === "/regulation"
-                    ? "text-[#fea116]"
-                    : "hover:text-[#fea116] transition-colors"
-                )}
+                className="text-right px-5 py-5 hover:text-[#fea116]"
               >
                 <span>PAST WINNERS</span>
               </Link>
