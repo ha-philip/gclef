@@ -54,7 +54,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="bg-[rgba(255,255,255,0.6)] fixed w-full h-full top-0 z-30 transition flex flex-col justify-center items-center px-3"
+            className="bg-[rgba(0,0,0,0.6)] fixed w-full h-full top-0 z-30 transition flex flex-col justify-center items-center px-3"
           >
             <h2
               className="cursor-pointer pb-2 lg:w-[75rem] w-full flex justify-end items-end"
@@ -65,7 +65,7 @@ export default function Home() {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="2"
-                stroke="#0f172be6"
+                stroke="white"
                 className="lg:w-8 lg:h-8 w-6 h-6"
               >
                 <path

@@ -154,19 +154,51 @@ export default function Regulation() {
           <p className="mt-5 font-thin lg:text-lg text-sm">
             2. Transfer the application fee to the following Paypal account.
             <br />
-            *Piano Solo, Piano Concerto Section : 130 Euros <br />
-            *Piano Duo Section : 160 Euros <br />
-            *Piano Chamber Music (60 Euros from each member) <br />
-            *String & Wind Instruments Section: 130 Euros <br />
-            *Singing Section : 130 Euros
+            * Piano Solo, Piano Concerto Section : 130 Euros <br />
+            * Piano Duo Section : 160 Euros <br />
+            * Piano Chamber Music (60 Euros from each member) <br />
+            * String & Wind Instruments Section: 130 Euros <br />
+            * Singing Section : 130 Euros
             <br />
-            *Chamber Music Section : Duet (160 Euros) From Trio (60 Euros from
+            * Chamber Music Section : Duet (160 Euros) From Trio (60 Euros from
             each member)
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            *Paypal: kmat0@nationalux.org <br/>
+            * Paypal: kmat0@nationalux.org <br />
             • It must be transfered with the name of the participant. (Mandatory)
           </p>
+        </div>
+        <div className="bg-yellow-50 shadow-xl mt-10 py-10 px-10 space-y-5 lg:text-base text-sm">
+          <h2 className="">
+            * Category Piano, String and Wind Instruments, Chamber Music: The video should be recorded with a fixed camera where the participant’s hand is visible.
+          </h2>
+          <h2>
+            * Category Vocal Section: The video should be recorded with a fixed camera where the participant’s face is visible.
+          </h2>
+          <h2>
+            * The recording must have been recorded after the 1st of December, 2021.
+          </h2>
+          <h2>
+            * Incomplete applications including failure to pay application fee will result in disqualification.
+          </h2>
+          <h2>
+            * All documents will not be returned and the application fee is not refundable.
+          </h2>
+          <h2>
+            * The judges’ decision is final and unappealable. The scores of the jury will not be provided and published.
+          </h2>
+          <h2>
+            * Jury may not vote to their own pupils.
+          </h2>
+          <h2>
+            * Certificate of the prize will be sent only by an e-mail, no later than the 10th of Dec. 2022.
+          </h2>
+          <h2>
+            * Nationalux has the right to post and use the videos of participants. Contestants may not claim competition and Nationalux for their profits and remuneration.
+          </h2>
+          <h2>
+            * Result of the competition will be announced on the 1st of Dec. 2022 on the homepage.
+          </h2>
         </div>
       </div>
     </div>
