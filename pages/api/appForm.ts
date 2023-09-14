@@ -15,7 +15,7 @@ export default async function handler(
       .json({ message: "Method not allowed", success: false });
   }
 }
-
+//패키지 빌드에 prisma generate && next build을 설정해야 호스팅 시 DB와 연동이 된다.
 async function addApp(req: NextApiRequest, res: NextApiResponse) {
   const body = req.body;
   try {
