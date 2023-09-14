@@ -19,7 +19,7 @@ export default async function handler(
 async function addApp(req: NextApiRequest, res: NextApiResponse) {
   const body = req.body;
   try {
-    const newApp = await prisma.writeForm.create({
+    const newApp = await prisma.gclef.create({
       data: {
         site: "g-clef",
         firstName: body.firstName,
