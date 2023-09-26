@@ -43,7 +43,7 @@ export default function Regulation() {
             There are different age categories in our competition, the age of
             participant must be calculated with this day.
             <br />
-            (31st of Oct. 2022)
+            (31st of Oct. 2024)
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
             Group A (8-9 years) <br />
@@ -93,7 +93,7 @@ export default function Regulation() {
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
             *The recording must have been recorded after the 1st of December,
-            2021
+            2023
           </p>
         </div>
 
@@ -105,7 +105,7 @@ export default function Regulation() {
             Announcement of the Result
           </h2>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            Notification on the homepage : December 1, 2022
+            Notification on the homepage : December 1, 2024
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
             Awards for each division
@@ -120,11 +120,11 @@ export default function Regulation() {
           <p className="mt-5 font-thin lg:text-lg text-sm">
             - To participant who received the most &apos;Like&apos; <br />
             (The competition will collect and post all participant’s videos on
-            the following Link on the 16th of Nov. 2022. Vote counting is only
+            the following Link on the 16th of Nov. 2024. Vote counting is only
             valid on this Web address: https://nationalux.com/@GCLEF)
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            - Counting period : From the 16th of Nov. to the 30th of Nov. 2022
+            - Counting period : From the 16th of Nov. to the 30th of Nov. 2024
           </p>
           <h2 className="lg:text-xl font-thin text-[#fea116] mt-5">
             Teacher’s Award
@@ -139,7 +139,7 @@ export default function Regulation() {
           <h2 className="lg:text-xl font-thin text-[#fea116] mt-5">
             Application Deadline
           </h2>
-          <p className="mt-5 font-thin lg:text-lg text-sm">October 31, 2022</p>
+          <p className="mt-5 font-thin lg:text-lg text-sm">October 31, 2024</p>
           <h2 className="lg:text-xl font-thin text-[#fea116] mt-5">
             Application Method
           </h2>
@@ -176,7 +176,7 @@ export default function Regulation() {
             * Category Vocal Section: The video should be recorded with a fixed camera where the participant’s face is visible.
           </h2>
           <h2>
-            * The recording must have been recorded after the 1st of December, 2021.
+            * The recording must have been recorded after the 1st of December, 2023.
           </h2>
           <h2>
             * Incomplete applications including failure to pay application fee will result in disqualification.
@@ -191,13 +191,13 @@ export default function Regulation() {
             * Jury may not vote to their own pupils.
           </h2>
           <h2>
-            * Certificate of the prize will be sent only by an e-mail, no later than the 10th of Dec. 2022.
+            * Certificate of the prize will be sent only by an e-mail, no later than the 10th of Dec. 2024.
           </h2>
           <h2>
             * Nationalux has the right to post and use the videos of participants. Contestants may not claim competition and Nationalux for their profits and remuneration.
           </h2>
           <h2>
-            * Result of the competition will be announced on the 1st of Dec. 2022 on the homepage.
+            * Result of the competition will be announced on the 1st of Dec. 2024 on the homepage.
           </h2>
         </div>
       </div>

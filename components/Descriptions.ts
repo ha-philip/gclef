@@ -66,10 +66,10 @@ export const jury: IJury[] = [
   },
   {
     id: "kim",
-    name: "Kim Jae Han",
-    country: "South Korea",
-    genre: "Jury ( Piano )",
-    photo: "/jaehan.jpeg",
-    description: "YONSEI Univercity Music Collage.",
+    name: "Comming Soon",
+    country: "Comming Soon",
+    genre: "Comming Soon",
+    photo: "",
+    description: "Comming Soon",
   },
 ];

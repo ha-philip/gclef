@@ -25,7 +25,7 @@ export default function Home() {
         <div className="flex justify-center items-center gap-5">
           <span className="lg:w-16 w-8 h-[0.2rem] bg-[#fea116]"></span>
           <h1 className="text-white lg:text-2xl text-base tracking-widest font-thin">
-            The 3rd Online
+            The 4th Online
           </h1>
           <h1 className="text-white lg:text-5xl text-2xl tracking-widest font-thin">
             &quot;G-Clef&quot;
