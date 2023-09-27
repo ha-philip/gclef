@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { cls } from "./utils";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 interface FormValues {
     firstName: string;
@@ -25,6 +26,7 @@ interface FormValues {
 }
 
 export default function Apply() {
+    const {locale} = useRouter();
     const [submitLoading, set_submitLoading] = useState<boolean>(false);
     const [submitPopup, set_submitPopup] = useState<boolean>(false);
     const [selectImg, set_selectImg] = useState("");
@@ -37,7 +39,6 @@ export default function Apply() {
     } = useForm<FormValues>({
         mode: "all",
     });
-    const locale = "en";
     const onVaild = async (data: any) => {
         set_submitLoading(true);
         const body = {
@@ -90,7 +91,7 @@ export default function Apply() {
             >
                 <h2 className="text-white p-6 tracking-widest lg:text-4xl text-xl font-thin">
                     {locale === "en" ? "APPLICATION" : "참가 신청서"}
-                    <p className="lg:text-lg text-sm tracking-tight">( * Required Field )</p>
+                    <p className="lg:text-lg text-sm tracking-tight">{locale === "en" ? "( * Required Field )" : "( * 필수 입력 항목 )"}</p>
                 </h2>
                 <form onSubmit={handleSubmit(onVaild)}>
                     <div className="lg:h-[34rem] h-[30rem] flex flex-col justify-start lg:p-10 p-3 overflow-y-scroll tracking-tighter">

@@ -1,9 +1,50 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
+interface IRegText {
+  regulaion_1: string;
+  regulaion_2: string;
+  regulaion_3: string;
+  regulaion_4: string;
+  regulaion_5: string;
+  regulaion_6: string;
+  regulaion_7: string;
+  regulaion_8: string;
+  regulaion_9: string;
+  regulaion_10: string;
+  regulaion_11: string;
+  regulaion_12: string;
+  regulaion_13: string;
+  regulaion_14: string;
+  regulaion_15: string;
+  regulaion_16: string;
+  regulaion_17: string;
+  regulaion_18: string;
+  regulaion_19: string;
+  regulaion_20: string;
+  regulaion_21: string;
+  regulaion_22: string;
+  regulaion_23: string;
+  regulaion_24: string;
+  regulaion_25: string;
+  regulaion_26: string;
+  regulaion_27: string;
+  regulaion_28: string;
+  regulaion_29: string;
+  regulaion_30: string;
+  regulaion_31: string;
+  regulaion_32: string;
+  regulaion_33: string;
+  regulaion_34: string;
+  regulaion_35: string;
+  regulaion_36: string;
+  regulaion_37: string;
+  regulaion_38: string;
+}
+
 export default function Regulation() {
-  const {locale} = useRouter();
-  const [regText, set_regText] = useState();
+  const { locale } = useRouter();
+  const [regText, set_regText] = useState<IRegText>();
 
   useEffect(() => {
     (async () => {
@@ -18,7 +59,7 @@ export default function Regulation() {
         {locale === "en" ? "Regulation" : "콩쿠르 요강"}
       </h1>
       <h2 className="lg:text-2xl text-lg font-bold lg:text-left text-center">
-        The Grand Prix will be awarded to the highest scorer in all categories
+        {regText?.regulaion_1}
       </h2>
       <div className="lg:mx-0 mx-6">
         <div className="bg-white shadow-xl mt-10 py-5 px-10">
@@ -33,28 +74,23 @@ export default function Regulation() {
         <div className="bg-white shadow-xl mt-10 py-5 px-10">
           <h1 className="lg:text-3xl font-thin text-[#fea116]">{locale === "en" ? "Section" : "참가부문"}</h1>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            1. Piano (Piano Solo, Piano Concerto, Piano Duo, Piano Chamber
-            Music)
+          {regText?.regulaion_2}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            2. String and Wind Instruments - Solo (with or without piano
-            accompaniment) - Except Ensemble & Chamber Music
+          {regText?.regulaion_3}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            3. Singing - Solo (with or without piano accompaniment) - Except
-            Ensemble & Chamber Music
+          {regText?.regulaion_4}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            4. Chamber Music: Duo, Trio, Quartet, Quintet and Others - Except
-            Piano Chamber Music
+          {regText?.regulaion_5}
           </p>
         </div>
 
         <div className="bg-white shadow-xl mt-10 py-5 px-10">
           <h1 className="lg:text-3xl font-thin text-[#fea116]">{locale === "en" ? "Age Division" : "나이별 부문"}</h1>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            There are different age categories in our competition, the age of
-            participant must be calculated with this day.
+          {regText?.regulaion_6}
             <br />
             {locale === "en" ? "(31st of Oct. 2024)" : "(2022년 10월 31일 기준)"}
           </p>
@@ -70,147 +106,139 @@ export default function Regulation() {
             Group I {locale === "en" ? "(over 32 years)" : "(만 32세 이상)"}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            *In the case of Duo Section and Chamber Music Section, the average
-            age of all participants determines the “Age division”.
+          {regText?.regulaion_7}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            (It is mandatory to attach the proof of age from each participant in
-            the application form.)
+          {regText?.regulaion_8}
           </p>
         </div>
 
         <div className="bg-white shadow-xl mt-10 py-5 px-10">
           <h1 className="lg:text-3xl font-thin text-[#fea116]">
-            Required Repertoire{locale === "en" ? "Section" : "참가부문"}
+            {locale === "en" ? "Required Repertoire" : "레퍼토리"}
           </h1>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            Free choice of 1 piece or several pieces{locale === "en" ? "Section" : "참가부문"}
+            {locale === "en" ? "Free choice of 1 piece or several pieces" : "경연 곡목: 한 곡 또는 여러 곡"}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            Group A : max. 6 min <br />
-            Group B : max. 8 min <br />
-            Group C : max. 10 min <br />
-            Group D : max. 12 min <br />
-            Group E : max. 15 min <br />
-            Group F : max. 18 min <br />
-            Group G : max. 20 min <br />
-            Group H : max. 25 min <br />
-            Group I : max. 30 min
+          Group A : {locale === "en" ? "max. 6 min" : "6분 미만"}<br />
+          Group B : {locale === "en" ? "max. 8 min" : "8분 미만"}<br />
+          Group C : {locale === "en" ? "max. 10 min" : "10분 미만"}<br />
+          Group D : {locale === "en" ? "max. 12 min" : "12분 미만"}<br />
+          Group E : {locale === "en" ? "max. 15 min" : "15분 미만"}<br />
+          Group F : {locale === "en" ? "max. 18 min" : "18분 미만"}<br />
+          Group G : {locale === "en" ? "max. 20 min" : "20분 미만"}<br />
+          Group H : {locale === "en" ? "max. 25 min" : "25분 미만"}<br />
+          Group I : {locale === "en" ? "max. 30 min" : "30분 미만"}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            *Music composed by the performer is not allowed, only officially
-            published works can be performed.
+          {regText?.regulaion_9}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            *Piano Concerto Section : All age groups- one or two Movements
+          {regText?.regulaion_10}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            *The recording must have been recorded after the 1st of December,
-            2023
+          {regText?.regulaion_11}
           </p>
         </div>
 
         <div className="bg-white shadow-xl mt-10 py-5 px-10">
           <h1 className="lg:text-3xl font-thin text-[#fea116]">
-            {locale === "en" ? "Awards For Each Division" : "나이별 부문"}
+            {locale === "en" ? "Awards For Each Division" : "부문별 시상"}
           </h1>
           <h2 className="lg:text-xl font-thin text-[#fea116] mt-5">
-            {locale === "en" ? "Announcement of the Result" : "참가부문"}
+            {locale === "en" ? "Announcement of the Result" : "결과"}
           </h2>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            Notification on the homepage : December 1, 2024{locale === "en" ? "Section" : "참가부문"}
+            {locale === "en" ? "Notification on the homepage : December 1, 2024" : "결과발표: 2024년 12월 1일"}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            Awards for each division{locale === "en" ? "Section" : "참가부문"}
+            {locale === "en" ? "Awards for each division" : "부문별 시상"}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            First Prize / Second Prize / Third Prize <br />
-            These main prizes will be selected only by the judges
+          {regText?.regulaion_12} <br />
+          {regText?.regulaion_13}
           </p>
           <h2 className="lg:text-xl font-thin text-[#fea116] mt-5">
-            Netizen Special Prize
+            {locale === "en" ? "Netizen Special Prize" : "네티즌 특별상"}
           </h2>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            - To participant who received the most &apos;Like&apos; <br />
-            (The competition will collect and post all participant’s videos on
-            the following Link on the 16th of Nov. 2024. Vote counting is only
-            valid on this Web address: https://nationalux.com/@GCLEF)
+          {regText?.regulaion_14}<br />
+          {regText?.regulaion_15}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            - Counting period : From the 16th of Nov. to the 30th of Nov. 2024
+          {regText?.regulaion_16}
           </p>
           <h2 className="lg:text-xl font-thin text-[#fea116] mt-5">
-            Teacher’s Award{locale === "en" ? "Section" : "참가부문"}
+            {locale === "en" ? "Teacher’s Award" : "지도자 상"}
           </h2>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            The teacher of the Grand Prix Winner and the teacher who produced
-            more than five Prize Winners will be awarded.
+          {regText?.regulaion_17}
           </p>
         </div>
         <div className="bg-white shadow-xl mt-10 py-5 px-10">
-          <h1 className="lg:text-3xl font-thin text-[#fea116]">Application{locale === "en" ? "Section" : "참가부문"}</h1>
+          <h1 className="lg:text-3xl font-thin text-[#fea116]">{locale === "en" ? "Application" : "접수"}</h1>
           <h2 className="lg:text-xl font-thin text-[#fea116] mt-5">
-            Application Deadline{locale === "en" ? "Section" : "참가부문"}
+            {locale === "en" ? "Application Deadline" : "신청마감일"}
           </h2>
-          <p className="mt-5 font-thin lg:text-lg text-sm">October 31, 2024{locale === "en" ? "Section" : "참가부문"}</p>
+          <p className="mt-5 font-thin lg:text-lg text-sm">{locale === "en" ? "October 31, 2024" : "2024년 10월 31일"}</p>
           <h2 className="lg:text-xl font-thin text-[#fea116] mt-5">
-            Application Method{locale === "en" ? "Section" : "참가부문"}
+            {locale === "en" ? "Application Method" : "신청방법"}
           </h2>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            Participants must submit{locale === "en" ? "Section" : "참가부문"}
+            {locale === "en" ? "Participants must submit" : "이 홈페이지를 통해 신청서 작성 후 제출"}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            1. Fill out online Application Form and click the button “Submit”
+          {regText?.regulaion_18}
             <br />
-            (Write the youtube link address of participating video)
+            {regText?.regulaion_19}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            2. Transfer the application fee to the following Paypal account.
+          {regText?.regulaion_20}
             <br />
-            * Piano Solo, Piano Concerto Section : 130 Euros <br />
-            * Piano Duo Section : 160 Euros <br />
-            * Piano Chamber Music (60 Euros from each member) <br />
-            * String & Wind Instruments Section: 130 Euros <br />
-            * Singing Section : 130 Euros
+            {regText?.regulaion_21} <br />
+            {regText?.regulaion_22} <br />
+            {regText?.regulaion_23} <br />
+            {regText?.regulaion_24} <br />
+            {regText?.regulaion_25}
             <br />
-            * Chamber Music Section : Duet (160 Euros) From Trio (60 Euros from
-            each member)
+            {regText?.regulaion_26}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            * Paypal: kmat0@nationalux.org <br />
-            • It must be transfered with the name of the participant. (Mandatory)
+          {regText?.regulaion_27} <br />
+          {regText?.regulaion_28}
           </p>
         </div>
         <div className="bg-yellow-50 shadow-xl mt-10 py-10 px-10 space-y-5 lg:text-base text-sm">
           <h2 className="">
-            * Category Piano, String and Wind Instruments, Chamber Music: The video should be recorded with a fixed camera where the participant’s hand is visible.
+          {regText?.regulaion_29}
           </h2>
           <h2>
-            * Category Vocal Section: The video should be recorded with a fixed camera where the participant’s face is visible.
+          {regText?.regulaion_30}
           </h2>
           <h2>
-            * The recording must have been recorded after the 1st of December, 2023.
+          {regText?.regulaion_31}
           </h2>
           <h2>
-            * Incomplete applications including failure to pay application fee will result in disqualification.
+          {regText?.regulaion_32}
           </h2>
           <h2>
-            * All documents will not be returned and the application fee is not refundable.
+          {regText?.regulaion_33}
           </h2>
           <h2>
-            * The judges’ decision is final and unappealable. The scores of the jury will not be provided and published.
+          {regText?.regulaion_34}
           </h2>
           <h2>
-            * Jury may not vote to their own pupils.
+          {regText?.regulaion_35}
           </h2>
           <h2>
-            * Certificate of the prize will be sent only by an e-mail, no later than the 10th of Dec. 2024.
+          {regText?.regulaion_36}
           </h2>
           <h2>
-            * Nationalux has the right to post and use the videos of participants. Contestants may not claim competition and Nationalux for their profits and remuneration.
+          {regText?.regulaion_37}
           </h2>
           <h2>
-            * Result of the competition will be announced on the 1st of Dec. 2024 on the homepage.
+          {regText?.regulaion_38}
           </h2>
         </div>
       </div>

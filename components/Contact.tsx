@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Contact() {
+  const { locale } = useRouter();
   return (
     <>
       <div
@@ -11,12 +13,12 @@ export default function Contact() {
         }}
       >
         <h1 className="lg:text-6xl text-4xl lg:text-left text-center text-[#fea116] tracking-wider font-thin">
-          Contact
+        {locale === "en" ? "Contact" : "오시는 길"}
         </h1>
         <div className="flex lg:flex-row flex-col justify-center items-center font-thin text-white tracking-tight mt-14 gap-16">
           <div className="flex flex-col justify-start items-start lg:w-96 w-80 h-72 border border-white px-5 gap-5 transition hover:text-[#fea116]">
             <h2 className="py-8 lg:text-2xl text-lg w-full text-center tracking-widest font-normal">
-              Organization
+              {locale === "en" ? "Organization" : "주최"}
             </h2>
             <span className="flex justify-center items-center gap-3 lg:text-lg">
               <svg
@@ -33,7 +35,7 @@ export default function Contact() {
                   d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
                 />
               </svg>
-              <p>MK Chamber Orchestra</p>
+              <p>{locale === "en" ? "MK Chamber Orchestra" : "MK 챔버 오케스트라"}</p>
             </span>
             <span className="flex justify-center items-center gap-3 lg:text-lg">
               <svg
@@ -75,7 +77,7 @@ export default function Contact() {
 
           <div className="flex flex-col justify-start items-start lg:w-96 w-80 h-72 border border-white px-5 gap-5 transition hover:text-[#fea116]">
             <h2 className="py-8 lg:text-2xl text-lg w-full text-center tracking-widest font-normal">
-                Sponsorship
+                {locale === "en" ? "Sponsorship" : "주관"}
             </h2>
             <span className="flex justify-center items-center gap-3 lg:text-lg">
               <svg

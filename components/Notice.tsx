@@ -1,9 +1,12 @@
+import { useRouter } from "next/router";
+
 export default function Notice() {
+  const { locale } = useRouter();
   return (
     <>
       <div className="lg:px-24 px-5 bg-[whitesmoke] py-14 pb-52">
         <h1 className="lg:text-6xl text-4xl lg:text-left text-center text-[#fea116] tracking-wider font-thin">
-          Notice
+          {locale === "en" ? "Notice" : "공지사항"}
         </h1>
         <div className="flex flex-col justify-center items-center space-y-10 mt-10">
           <div className="bg-white shadow-2xl flex flex-col w-full">

@@ -20,7 +20,6 @@ export default function NavigationBar() {
   const { scrollY } = useScroll();
   const navAnimation = useAnimation();
   const buttonAnimation = useAnimation();
-  const [lanToggle, set_lanToggle] = useState<"KR" | "EN">("EN");
   const [toggleMenu, set_toggleMenu] = useState<boolean>(false);
   const [overlay, setOverlay] = useState<boolean>(false);
 
@@ -99,7 +98,7 @@ export default function NavigationBar() {
               <button 
               onClick={() => setOverlay(true)}
               className="bg-[#fea116] py-8 px-20 text-white text-2xl tracking-wider flex justify-center items-center gap-3 hover:bg-[#fdad35] transition">
-                APPLY
+                {locale === "en" ? "APPLY" : "신청하기"}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                 </svg>
@@ -175,7 +174,7 @@ export default function NavigationBar() {
               <button 
               onClick={() => setOverlay(true)}
               className="bg-[#fea116] py-6 text-white text-lg tracking-wider flex justify-center items-center gap-3 hover:bg-[#fdad35] transition">
-                APPLY
+                {locale === "en" ? "APPLY" : "신청하기"}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                 </svg>
