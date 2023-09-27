@@ -6,10 +6,12 @@ import Notice from "@/components/Notice";
 import Regulation from "@/components/Regulation";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function Home() {
   const [overlay, setOverlay] = useState<boolean>(false);
+  const {locale} = useRouter();
   return (
     <>
       <Head>
@@ -25,21 +27,21 @@ export default function Home() {
         <div className="flex justify-center items-center gap-5">
           <span className="lg:w-16 w-8 h-[0.2rem] bg-[#fea116]"></span>
           <h1 className="text-white lg:text-2xl text-base tracking-widest font-thin">
-            The 4th Online
+            {locale === "en" ? "The 4th Online" : "제 4회"}
           </h1>
           <h1 className="text-white lg:text-5xl text-2xl tracking-widest font-thin">
-            &quot;G-Clef&quot;
+            &quot;{locale === "en" ? "G-Clef" : "지클레프"}&quot;
           </h1>
           <span className="lg:w-16 w-8 h-[0.2rem] bg-[#fea116]"></span>
         </div>
         <h1 className="text-white font-bold lg:text-6xl text-3xl mt-10 text-center tracking-wide">
-          International Music Competition
+          {locale === "en" ? "International Music Competition" : "온라인 국제 음악 콩쿠르"}
         </h1>
         <button
           onClick={() => setOverlay(true)}
           className="bg-[#fea116] px-12 py-4 text-white tracking-tight lg:text-xl text-lg mt-10 hover:bg-[#fdad35] transition"
         >
-          APPLY
+          {locale === "en" ? "APPLY" : "신청하기"}
         </button>
       </div>
       <Introduce />

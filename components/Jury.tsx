@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { jury } from "./Descriptions";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Jury() {
+  const {locale} = useRouter();
+
   const [juryCard, set_juryCard] = useState<string | null>(null);
   const getOverlay = (id: string) => {
     set_juryCard(id);
@@ -15,14 +18,14 @@ export default function Jury() {
     <>
       <div className="bg-[whitesmoke] lg:py-32 py-16 lg:px-24">
         <h1 className="lg:text-6xl text-4xl lg:text-left text-center text-[#fea116] tracking-wider font-thin">
-          Jury
+          {locale === "en" ? "Jury" : "심사위원"}
         </h1>
         <h2 className="lg:text-2xl text-lg font-bold lg:text-left text-center">
-          2022 Jury members
+          {locale === "en" ? "2022 Jury members" : "2022년 심사위원"}
         </h2>
         <div className="flex lg:justify-start justify-center items-center gap-2">
           <Link className="font-thin lg:text-base text-sm hover:text-[#fea116]" href="">
-            Past Jury Members
+            {locale === "en" ? "Past Jury Members" : "역대 심사위원"}
             
           </Link>
         </div>

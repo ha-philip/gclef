@@ -1,8 +1,21 @@
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+
 export default function Regulation() {
+  const {locale} = useRouter();
+  const [regText, set_regText] = useState();
+
+  useEffect(() => {
+    (async () => {
+      const response = await fetch(`/locales/${locale}/regulation.json`);
+      const json = await response.json();
+      set_regText(json);
+    })();
+  }, [locale]);
   return (
     <div className="bg-[whitesmoke] lg:py-32 py-16 lg:px-24">
       <h1 className="lg:text-6xl text-4xl lg:text-left text-center text-[#fea116] tracking-wider font-thin">
-        Regulation
+        {locale === "en" ? "Regulation" : "콩쿠르 요강"}
       </h1>
       <h2 className="lg:text-2xl text-lg font-bold lg:text-left text-center">
         The Grand Prix will be awarded to the highest scorer in all categories
@@ -10,15 +23,15 @@ export default function Regulation() {
       <div className="lg:mx-0 mx-6">
         <div className="bg-white shadow-xl mt-10 py-5 px-10">
           <h1 className="lg:text-3xl text-xl font-thin text-[#fea116]">
-            Award
+            {locale === "en" ? "Award" : "시상"}
           </h1>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            Grand Prix: 2000 US Dollars
+            {locale === "en" ? "Grand Prix: 2000 US Dollars" : "$ 2000 (USD) 및 MK 챔버 오케스트라와의 협연비 부분 지원"}
           </p>
         </div>
 
         <div className="bg-white shadow-xl mt-10 py-5 px-10">
-          <h1 className="lg:text-3xl font-thin text-[#fea116]">Section</h1>
+          <h1 className="lg:text-3xl font-thin text-[#fea116]">{locale === "en" ? "Section" : "참가부문"}</h1>
           <p className="mt-5 font-thin lg:text-lg text-sm">
             1. Piano (Piano Solo, Piano Concerto, Piano Duo, Piano Chamber
             Music)
@@ -38,23 +51,23 @@ export default function Regulation() {
         </div>
 
         <div className="bg-white shadow-xl mt-10 py-5 px-10">
-          <h1 className="lg:text-3xl font-thin text-[#fea116]">Age Division</h1>
+          <h1 className="lg:text-3xl font-thin text-[#fea116]">{locale === "en" ? "Age Division" : "나이별 부문"}</h1>
           <p className="mt-5 font-thin lg:text-lg text-sm">
             There are different age categories in our competition, the age of
             participant must be calculated with this day.
             <br />
-            (31st of Oct. 2024)
+            {locale === "en" ? "(31st of Oct. 2024)" : "(2022년 10월 31일 기준)"}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            Group A (8-9 years) <br />
-            Group B (10-11 years) <br />
-            Group C (12-13 years) <br />
-            Group D (14-15 years) <br />
-            Group E (16-17 years) <br />
-            Group F (18-19 years) <br />
-            Group G (20-25 years) <br />
-            Group H (26-31 years) <br />
-            Group I (over 32 years)
+            Group A {locale === "en" ? "(8-9 years)" : "(만 8-9세)"}<br />
+            Group B {locale === "en" ? "(10-11 years)" : "(만 10-11세)"}<br />
+            Group C {locale === "en" ? "(12-13 years)" : "(만 12-13세)"}<br />
+            Group D {locale === "en" ? "(14-15 years)" : "(만 14-15세)"}<br />
+            Group E {locale === "en" ? "(16-17 years)" : "(만 16-17세)"}<br />
+            Group F {locale === "en" ? "(18-19 years)" : "(만 18-19세)"}<br />
+            Group G {locale === "en" ? "(20-25 years)" : "(만 20-25세)"}<br />
+            Group H {locale === "en" ? "(26-31 years)" : "(만 26-31세)"}<br />
+            Group I {locale === "en" ? "(over 32 years)" : "(만 32세 이상)"}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
             *In the case of Duo Section and Chamber Music Section, the average
@@ -68,10 +81,10 @@ export default function Regulation() {
 
         <div className="bg-white shadow-xl mt-10 py-5 px-10">
           <h1 className="lg:text-3xl font-thin text-[#fea116]">
-            Required Repertoire
+            Required Repertoire{locale === "en" ? "Section" : "참가부문"}
           </h1>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            Free choice of 1 piece or several pieces
+            Free choice of 1 piece or several pieces{locale === "en" ? "Section" : "참가부문"}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
             Group A : max. 6 min <br />
@@ -99,16 +112,16 @@ export default function Regulation() {
 
         <div className="bg-white shadow-xl mt-10 py-5 px-10">
           <h1 className="lg:text-3xl font-thin text-[#fea116]">
-            Awards For Each Division
+            {locale === "en" ? "Awards For Each Division" : "나이별 부문"}
           </h1>
           <h2 className="lg:text-xl font-thin text-[#fea116] mt-5">
-            Announcement of the Result
+            {locale === "en" ? "Announcement of the Result" : "참가부문"}
           </h2>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            Notification on the homepage : December 1, 2024
+            Notification on the homepage : December 1, 2024{locale === "en" ? "Section" : "참가부문"}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            Awards for each division
+            Awards for each division{locale === "en" ? "Section" : "참가부문"}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
             First Prize / Second Prize / Third Prize <br />
@@ -127,7 +140,7 @@ export default function Regulation() {
             - Counting period : From the 16th of Nov. to the 30th of Nov. 2024
           </p>
           <h2 className="lg:text-xl font-thin text-[#fea116] mt-5">
-            Teacher’s Award
+            Teacher’s Award{locale === "en" ? "Section" : "참가부문"}
           </h2>
           <p className="mt-5 font-thin lg:text-lg text-sm">
             The teacher of the Grand Prix Winner and the teacher who produced
@@ -135,16 +148,16 @@ export default function Regulation() {
           </p>
         </div>
         <div className="bg-white shadow-xl mt-10 py-5 px-10">
-          <h1 className="lg:text-3xl font-thin text-[#fea116]">Application</h1>
+          <h1 className="lg:text-3xl font-thin text-[#fea116]">Application{locale === "en" ? "Section" : "참가부문"}</h1>
           <h2 className="lg:text-xl font-thin text-[#fea116] mt-5">
-            Application Deadline
+            Application Deadline{locale === "en" ? "Section" : "참가부문"}
           </h2>
-          <p className="mt-5 font-thin lg:text-lg text-sm">October 31, 2024</p>
+          <p className="mt-5 font-thin lg:text-lg text-sm">October 31, 2024{locale === "en" ? "Section" : "참가부문"}</p>
           <h2 className="lg:text-xl font-thin text-[#fea116] mt-5">
-            Application Method
+            Application Method{locale === "en" ? "Section" : "참가부문"}
           </h2>
           <p className="mt-5 font-thin lg:text-lg text-sm">
-            Participants must submit
+            Participants must submit{locale === "en" ? "Section" : "참가부문"}
           </p>
           <p className="mt-5 font-thin lg:text-lg text-sm">
             1. Fill out online Application Form and click the button “Submit”

@@ -16,6 +16,7 @@ const ScrollUp = {
 
 export default function NavigationBar() {
   const router = useRouter();
+  const {locale} = useRouter();
   const { scrollY } = useScroll();
   const navAnimation = useAnimation();
   const buttonAnimation = useAnimation();
@@ -68,31 +69,31 @@ export default function NavigationBar() {
                 href="#jury"
                 className="flex flex-col items-center space-y-2 hover:text-[#fea116] transition"
               >
-                <span>JURY</span>
+                <span>{locale === "en" ? "JURY" : "심사위원"}</span>
               </Link>
               <Link
                 href="#past"
                 className="flex flex-col items-center space-y-2 hover:text-[#fea116] transition"
               >
-                <span>PAST WINNERS</span>
+                <span>{locale === "en" ? "PAST WINNERS" : "역대 수상자"}</span>
               </Link>
               <Link
                 href="#regulation"
                 className="flex flex-col items-center space-y-2 hover:text-[#fea116] transition"
               >
-                <span>REGULATION</span>
+                <span>{locale === "en" ? "REGULATION" : "콩쿠르 요강"}</span>
               </Link>
               <Link
                 href="#notice"
                 className="flex flex-col items-center space-y-2 hover:text-[#fea116] transition"
               >
-                <span>NOTICE</span>
+                <span>{locale === "en" ? "NOTICE" : "공지사항"}</span>
               </Link>
               <Link
                 href="#contact"
                 className="flex flex-col items-center space-y-2 hover:text-[#fea116] transition"
               >
-                <span>CONTACT</span>
+                <span>{locale === "en" ? "CONTACT" : "오시는길"}</span>
               </Link>
 
               <button 
@@ -142,48 +143,35 @@ export default function NavigationBar() {
           {toggleMenu ? (
             <motion.div className={`text-white lg:hidden flex flex-col text-xs`}>
               <Link
-                href="#regulation"
-                className="text-right px-5 py-5 hover:text-[#fea116]"
-              >
-                <span>MAIN</span>
-              </Link>
-              <Link
-                href="/jury"
-                className="text-right px-5 py-5 hover:text-[#fea116]"
-              >
-                <span>WELCOME</span>
-              </Link>
-              <Link
-                href="/contact"
-                className="text-right px-5 py-5 hover:text-[#fea116]"
-              >
-                <span>INFORMATION</span>
-              </Link>
-              <Link
                 href="/notice"
                 className="text-right px-5 py-5 hover:text-[#fea116]"
               >
-                <span>JURY</span>
+                <span>{locale === "en" ? "JURY" : "심사위원"}</span>
               </Link>
               <Link
                 href="/past"
                 className="text-right px-5 py-5 hover:text-[#fea116]"
               >
-                <span>CONTACT</span>
+                <span>{locale === "en" ? "PAST WINNERS" : "역대 수상자"}</span>
               </Link>
               <Link
                 href="/past"
                 className="text-right px-5 py-5 hover:text-[#fea116]"
               >
-                <span>NOTICE</span>
+                <span>{locale === "en" ? "REGULATION" : "콩쿠르 요강"}</span>
               </Link>
               <Link
                 href="/past"
                 className="text-right px-5 py-5 hover:text-[#fea116]"
               >
-                <span>PAST WINNERS</span>
+                <span>{locale === "en" ? "NOTICE" : "공지사항"}</span>
               </Link>
-
+              <Link
+                href="/past"
+                className="text-right px-5 py-5 hover:text-[#fea116]"
+              >
+                <span>{locale === "en" ? "CONTACT" : "오시는 길"}</span>
+              </Link>
               <button 
               onClick={() => setOverlay(true)}
               className="bg-[#fea116] py-6 text-white text-lg tracking-wider flex justify-center items-center gap-3 hover:bg-[#fdad35] transition">
