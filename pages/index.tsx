@@ -2,14 +2,29 @@ import Apply from "@/components/Apply";
 import Contact from "@/components/Contact";
 import Introduce from "@/components/Introduce";
 import Jury from "@/components/Jury";
-import Notice from "@/components/Notice";
 import Regulation from "@/components/Regulation";
 import { motion } from "framer-motion";
+import { GetServerSideProps } from "next";
+import dynamic from "next/dynamic";
 import Head from "next/head";
+import { prisma } from "@/server/client";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-export default function Home() {
+interface INoticeForms {
+  noticePost: {
+    id:string;
+    noticeTitle:string;
+    formatnoticeText:string;
+    createdAt:string;
+    updatedAt:string;
+  }[]
+}
+
+export default function Home({noticePost}:INoticeForms) {
+  const Notice = dynamic(() => import("@/components/Notice"), {
+    ssr: false
+  });
   const [overlay, setOverlay] = useState<boolean>(false);
   const {locale} = useRouter();
   return (
@@ -47,7 +62,7 @@ export default function Home() {
       <Introduce />
       <Jury />
       <Regulation />
-      <Notice />
+      <Notice noticePost={noticePost}/>
       <Contact />
 
       {overlay ? (
@@ -83,4 +98,14 @@ export default function Home() {
       ) : null}
     </>
   );
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const noticePost = await prisma.$queryRaw`SELECT id, noticeTitle, REPLACE(noticeText, '\n', '\n') as formatnoticeText, createdAt, updatedAt FROM Notice ORDER BY updatedAt DESC`;
+  return {
+      props: { 
+        noticePost: JSON.parse(JSON.stringify(noticePost))
+      }
+
+  }
 }
