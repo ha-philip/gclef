@@ -76,9 +76,9 @@ export default function Jury() {
                       <p className="lg:text-lg text-xs">{jury[0].genre}</p>
                     </div>
                   </div>
-                  <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
+                  <p className="bg-[#f0f0f0] whitespace-pre-wrap lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
                     {jury[0].description}
-                  </div>
+                  </p>
                 </>
               )}
               {juryCard === jury[1].id && (
@@ -96,9 +96,9 @@ export default function Jury() {
                       <p className="lg:text-lg text-xs">{jury[1].genre}</p>
                     </div>
                   </div>
-                  <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
+                  <p className="bg-[#f0f0f0] whitespace-pre-wrap lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
                     {jury[1].description}
-                  </div>
+                  </p>
                 </>
               )}
               {juryCard === jury[2].id && (
@@ -116,9 +116,9 @@ export default function Jury() {
                       <p className="lg:text-lg text-xs">{jury[2].genre}</p>
                     </div>
                   </div>
-                  <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
+                  <p className="bg-[#f0f0f0] whitespace-pre-wrap lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
                     {jury[2].description}
-                  </div>
+                  </p>
                 </>
               )}
               {juryCard === jury[3].id && (
@@ -136,9 +136,9 @@ export default function Jury() {
                       <p className="lg:text-lg text-xs">{jury[3].genre}</p>
                     </div>
                   </div>
-                  <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
+                  <p className="bg-[#f0f0f0] whitespace-pre-wrap lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
                     {jury[3].description}
-                  </div>
+                  </p>
                 </>
               )}
               {juryCard === jury[4].id && (
@@ -156,9 +156,9 @@ export default function Jury() {
                       <p className="lg:text-lg text-xs">{jury[4].genre}</p>
                     </div>
                   </div>
-                  <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
+                  <p className="bg-[#f0f0f0] whitespace-pre-wrap lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
                     {jury[4].description}
-                  </div>
+                  </p>
                 </>
               )}
               {juryCard === jury[5].id && (
@@ -176,9 +176,9 @@ export default function Jury() {
                       <p className="lg:text-lg text-xs">{jury[5].genre}</p>
                     </div>
                   </div>
-                  <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
+                  <p className="bg-[#f0f0f0] whitespace-pre-wrap lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
                     {jury[5].description}
-                  </div>
+                  </p>
                 </>
               )}
               {juryCard === jury[6].id && (
@@ -196,9 +196,9 @@ export default function Jury() {
                       <p className="lg:text-lg text-xs">{jury[6].genre}</p>
                     </div>
                   </div>
-                  <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
+                  <p className="bg-[#f0f0f0] whitespace-pre-wrap lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
                     {jury[6].description}
-                  </div>
+                  </p>
                 </>
               )}
               {juryCard === jury[7].id && (
@@ -216,9 +216,9 @@ export default function Jury() {
                       <p className="lg:text-lg text-xs">{jury[7].genre}</p>
                     </div>
                   </div>
-                  <div className="bg-[#f0f0f0] lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
+                  <p className="bg-[#f0f0f0] whitespace-pre-wrap lg:p-10 p-5 font-thin lg:text-lg text-xs overflow-y-scroll lg:h-72 h-72">
                     {jury[7].description}
-                  </div>
+                  </p>
                 </>
               )}
             </div>
